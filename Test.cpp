@@ -33,9 +33,9 @@ TEST_CASE("Throws Check")
     CHECK_THROWS(notebook.write(0, 0, 0, Direction::Vertical, "abc"));
 
     // Check throws on line length longer than 100 
-    CHECK_THROWS(notebook.erase(1, 4, 78, Direction::Vertical, 69));
+    CHECK_THROWS(notebook.erase(1, 4, 78, Direction::Horizontal, 69));
     CHECK_THROWS(notebook.write(12, 14, 96, Direction::Horizontal, "NEW_Line"));
-    CHECK_THROWS(notebook.read(1, 4, 99, Direction::Vertical, 3));
+    CHECK_THROWS(notebook.read(1, 4, 99, Direction::Horizontal, 3));
     // Checking on coll > 100
     CHECK_THROWS(notebook.erase(1, 4, 101, Direction::Vertical, 12));
     CHECK_THROWS(notebook.write(12, 14, 105, Direction::Horizontal, "NEW_Line"));
